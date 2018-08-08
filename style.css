@@ -1,0 +1,91 @@
+$hotPink: #ff199f;
+
+body{
+  text-align: center;
+  background: url("http://sfwallpaper.com/images/black-and-white-guitar-wallpaper-16.jpg") no-repeat fixed right;
+}
+
+/*Grey box and switches */
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background: #cccccc;
+ }
+
+/*Grey box*/
+  #main {
+  padding: 2rem;
+  max-width: 40rem;
+    margin : {
+    left: auto;
+    right: auto;
+    top: 2rem
+    }
+  border: solid $hotPink;
+}
+
+/*Drum buttons*/
+.drum{
+  background: black;
+  border: solid black;
+  color: white;
+  width: 3rem;
+  height: 3rem;
+  margin: .3rem;
+  font-family: 'Play', sans-serif;
+}
+
+
+ /*The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  margin-left:.5rem; 
+  margin-right:.5rem;
+  width: 60px;
+  height: 34px;
+  
+}
+
+ /*The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: black;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 30px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 30px;
+}
+
+input:checked + .slider {
+  background-color: $hotPink;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px $hotPink;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
