@@ -3,6 +3,12 @@ $hotPink: #ff199f;
 body{
   text-align: center;
   background: url("http://sfwallpaper.com/images/black-and-white-guitar-wallpaper-16.jpg") no-repeat fixed right;
+    font-family: 'Play', sans-serif;
+}
+
+#title{
+  font-family: 'Rock Salt', cursive;
+  color: $hotPink;
 }
 
 /*Grey box and switches */
@@ -10,23 +16,24 @@ body{
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  background: #cccccc;
+ 
  }
 
 /*Grey box*/
-  #main {
+  #drum-machine {
   padding: 2rem;
   max-width: 40rem;
+  background: rgba(204, 204, 204, 0.7);
     margin : {
     left: auto;
     right: auto;
     top: 2rem
     }
-  border: solid $hotPink;
+  border: solid #ccc;
 }
 
 /*Drum buttons*/
-.drum{
+.drum-pad{
   background: black;
   border: solid black;
   color: white;
@@ -34,6 +41,14 @@ body{
   height: 3rem;
   margin: .3rem;
   font-family: 'Play', sans-serif;
+  cursor: pointer;
+}
+
+.drum-pad:hover{
+  background: #ccc;
+  border: #ccc;
+  color: $hotPink;
+  transition: .4s;
 }
 
 
@@ -87,5 +102,13 @@ input:checked + .slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);
+}
+
+ /*Display what button/note is being pressed */
+#display{
+  background-color: rgba(204, 204, 204, 0.7);
+  border: solid black;
+  height: 2rem;
+  padding: .2rem;
 }
 
