@@ -1,11 +1,13 @@
+//Color variable: hot pink
 $hotPink: #ff199f;
 
 body{
   text-align: center;
   background: url("http://sfwallpaper.com/images/black-and-white-guitar-wallpaper-16.jpg") no-repeat fixed right;
-    font-family: 'Play', sans-serif;
+  font-family: 'Play', sans-serif;
 }
 
+/*Heading*/
 #title{
   font-family: 'Rock Salt', cursive;
   color: $hotPink;
@@ -16,15 +18,15 @@ body{
   display: flex;
   flex-direction: row;
   justify-content: space-around;
- 
  }
 
-/*Grey box*/
-  #drum-machine {
+/*Grey box ONLY*/
+#drum-machine {
   padding: 2rem;
   max-width: 40rem;
   background: rgba(204, 204, 204, 0.7);
-    margin : {
+  //Nested CSS for fun!
+  margin : {
     left: auto;
     right: auto;
     top: 2rem
@@ -37,10 +39,11 @@ body{
   background: black;
   border: solid black;
   color: white;
-  width: 3rem;
-  height: 3rem;
+  width: 4rem;
+  height: 4rem;
   margin: .3rem;
   font-family: 'Play', sans-serif;
+  font-size: 1.5rem;
   cursor: pointer;
 }
 
@@ -51,7 +54,6 @@ body{
   transition: .4s;
 }
 
-
  /*The switch - the box around the slider */
 .switch {
   position: relative;
@@ -60,7 +62,6 @@ body{
   margin-right:.5rem;
   width: 60px;
   height: 34px;
-  
 }
 
  /*The slider */
@@ -104,7 +105,7 @@ input:checked + .slider:before {
   transform: translateX(26px);
 }
 
- /*Display what button/note is being pressed */
+/*Grey Display Screen*/
 #display{
   background-color: rgba(204, 204, 204, 0.7);
   border: solid black;
@@ -112,3 +113,44 @@ input:checked + .slider:before {
   padding: .2rem;
 }
 
+/*Volume Slider
+Resource: W3Schools*/
+.slidecontainer {
+    width: 100%; /* Width of the outside container */
+}
+
+/* The slider itself */
+.slides {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 100%; /* Full-width */
+    height: 1.5rem; /* Specified height */
+    background: #ccc; /* Grey background */
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+    margin-bottom: 1rem
+}
+
+/* Mouse-over effects */
+.slides:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */ 
+.slides::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 25px; /* Set a specific slider handle width */
+    height: 1.5rem; /* Slider handle height */
+    background: white;
+    cursor: pointer; /* Cursor on hover */
+}
+
+.slides::-moz-range-thumb {
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #4CAF50; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+}
